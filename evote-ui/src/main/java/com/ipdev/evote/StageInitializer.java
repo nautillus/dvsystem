@@ -22,8 +22,6 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent> {
     @Value("${application.window.decorate:false}")
     private String decorate;
 
-    @Value("${spring.simulate.not_found.fiscal:false}")
-    private boolean tmpSimulateInvalidFiscalID;
     public StageInitializer(@Value("${spring.application.ui.title}") String applicationTitle,
                             FxWeaver fxWeaver) {
         this.applicationTitle = applicationTitle;
@@ -35,7 +33,6 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent> {
         Stage stage = event.getStage();
         stage.initStyle(Boolean.valueOf(decorate) ? StageStyle.DECORATED : StageStyle.UNDECORATED);
         stage.setScene(new Scene(fxWeaver.loadView(WelcomeController.class), Double.valueOf(width), Double.valueOf(height)));
-        stage.getScene().setUserData(tmpSimulateInvalidFiscalID);
         stage.setTitle(applicationTitle);
         stage.show();
     }

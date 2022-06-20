@@ -61,6 +61,7 @@ public class RowController extends ListCell<RowBlankDto> {
                 BackgroundImage myBI= new BackgroundImage(new Image(targetStream),
                         BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
                         BackgroundSize.DEFAULT);
+                //TODO Fix repaint of image in UI instead of default
                 iconParty.setBackground(new Background(myBI));
             }
             leader.setText(rowBlankDto.leader());

@@ -44,7 +44,7 @@ public class WelcomeController {
     @Autowired
     private GrpcAppClient grpcAppClient;
 
-    private List<String> tmpFiscal = Arrays.asList(
+    private List<String> tmpFiscalIds = Arrays.asList(
             "PVL RIU 87D09 Z140M",
             "PVL NDR 76D17 Z140N",
             "NTL PLV 68E62 Z140A",
@@ -58,13 +58,12 @@ public class WelcomeController {
     public void initialize() {
         fireScanEvent.setOnAction(action -> {
             FxControllerAndView<LoadingController, StackPane> loading = fxWeaver.load(LoadingController.class);
-            Collections.shuffle(tmpFiscal);
+            Collections.shuffle(tmpFiscalIds);
             ExecutorService es = Executors.newFixedThreadPool(1);
             CompletableFuture.supplyAsync(() -> {
                 FiscalResponse fiscalResponse;
                 try {
-                    Object userData = fireScanEvent.getScene().getUserData();
-                    String fiscalId = userData != null && (boolean) userData ? "PLV 1111 NOT EXISTS" : tmpFiscal.get(0);
+                    String fiscalId = tmpFiscalIds.get(0);
                     System.out.println("Event fired with fiscalId: " + fiscalId);
                     fiscalResponse =
                             grpcAppClient.getService().check(
@@ -103,7 +102,7 @@ public class WelcomeController {
         loading.getController().stopTimer();
         loading.getController().closeStg();
         Stage window = (Stage) fireScanEvent.getScene().getWindow();
-        window.setUserData(tmpFiscal.get(0));
+        window.setUserData(tmpFiscalIds.get(0));
         event.setStage(window);
         event.setNextScene(nextSceneEvent);
         publisher.publishEvent(event);
