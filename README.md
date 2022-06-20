@@ -1,2 +1,2 @@
 # dvs
-Digital Vote System
+Demo Digital Vote System
