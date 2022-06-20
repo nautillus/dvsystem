@@ -1,0 +1,4 @@
+.icon-party{
+    -fx-background-size: cover;
+    -fx-background-image: url("../img/party-icon.png");
+}

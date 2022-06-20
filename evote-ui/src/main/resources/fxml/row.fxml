@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #ffffff;"
+            xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1">
+<!--            fx:controller="com.ipdev.evote.ui.control.RowController">-->
+
+   <children>
+      <GridPane fx:id="gridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="620.0" prefHeight="144.0" prefWidth="620.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="126.66668701171875" />
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="321.99997965494794" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="133.00000000000006" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane fx:id="iconParty" prefHeight="80.0" prefWidth="165.0" styleClass="icon-party" stylesheets="@../css/icon.css" />
+            <VBox alignment="TOP_CENTER" prefHeight="144.0" prefWidth="350.0" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="leader" prefHeight="63.0" prefWidth="235.0" text="PARTY LEADER" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="party" text="PARTY NAME" />
+               </children>
+            </VBox>
+            <RadioButton fx:id="stamp" alignment="CENTER_RIGHT" blendMode="MULTIPLY" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="162.0" prefWidth="161.0" stylesheets="@../css/radio.css" GridPane.columnIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

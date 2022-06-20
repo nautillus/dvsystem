@@ -1,0 +1,6 @@
+.success-label {
+    -fx-text-fill: #222000;
+    -fx-background-color: #ffffff;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}

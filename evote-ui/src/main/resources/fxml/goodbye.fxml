@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane stylesheets="@../css/goodbye.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipdev.evote.ui.control.GoodByeController">
+   <children>
+
+      <ImageView fx:id="iView" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+
+      <BorderPane  maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Label styleClass="success-label" text="Thanks, your vote is submitted successfully!&#10;" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="46.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="You will be redirected to Welcome screen in" />
+                  <Label fx:id="count"/>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

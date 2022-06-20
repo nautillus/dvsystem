@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+
+
+<Label text="Timeout Error, Was not possible to verify your data!"
+       textAlignment="CENTER" textFill="#f40000"
+       wrapText="true" xmlns="http://javafx.com/javafx/16"
+       xmlns:fx="http://javafx.com/fxml/1"
+       fx:id="msg"
+       fx:controller="com.ipdev.evote.ui.control.ErrorController">
+   <font>
+      <Font size="18.0" />
+   </font>
+</Label>

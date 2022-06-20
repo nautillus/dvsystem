@@ -1,0 +1,37 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.ipdev.evote.grpc.client;
+
+import "google/protobuf/timestamp.proto";
+
+message FiscalRequest {
+    string fiscal_id = 1;
+}
+message FiscalResponse {
+    bool voted = 1;
+}
+message PartyRequest {
+    string token = 1;
+}
+message PartyResponse {
+    repeated RowBlank voted = 1;
+}
+message VoteRequest {
+    google.protobuf.Timestamp inserted = 1;
+    RowBlank voted = 2;
+}
+message VoteResponse {
+    bool success = 1;
+}
+message RowBlank {
+    int32 id = 1;
+    string leader = 2;
+    string party = 3;
+    bytes image = 4;
+}
+service EVoteService {
+    rpc check(FiscalRequest) returns (FiscalResponse);
+    rpc getAvailableChoices(PartyRequest) returns (PartyResponse);
+    rpc vote(VoteRequest) returns (VoteResponse);
+    rpc finishVote(FiscalRequest) returns (FiscalResponse);
+}

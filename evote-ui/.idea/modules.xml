@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../evote-grpc-be/evote-grpc-be.iml" filepath="$PROJECT_DIR$/../evote-grpc-be/evote-grpc-be.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../evote-grpc-fe/evote-grpc-fe.iml" filepath="$PROJECT_DIR$/../evote-grpc-fe/evote-grpc-fe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evote-ui.iml" filepath="$PROJECT_DIR$/evote-ui.iml" />
+    </modules>
+  </component>
+</project>

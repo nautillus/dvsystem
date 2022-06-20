@@ -1,0 +1,10 @@
+.icon-scan-passport{
+    -fx-background-size: cover;
+    -fx-background-image: url("../img/scan-passport-icon.png");
+}
+.scan-passport-label{
+    -fx-text-fill: #222000;
+    -fx-background-color: #ffffff;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
